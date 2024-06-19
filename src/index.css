@@ -1,0 +1,6 @@
+#root {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  gap: 0.8rem;
+}
