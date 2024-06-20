@@ -7,22 +7,32 @@ function App() {
 
   return (
     <div>
-      <button
+      <motion.button
         onClick={() => setIsVisible(!isVisible)}
         className='example-button'
+        layout
       >
         Show/Hide
-      </button>
-      <AnimatePresence>
+      </motion.button>
+      <AnimatePresence mode='popLayout'>
         {isVisible && (
           <motion.div
-            initial={{ rotate: '0deg' }}
-            animate={{ rotate: '180deg' }}
+            initial={{
+              scale: 0,
+              rotate: '0deg',
+            }}
+            animate={{
+              scale: 1,
+              rotate: '180deg',
+            }}
+            exit={{
+              scale: 0,
+              rotate: '0deg',
+            }}
             transition={{
-              duration: 2,
+              duration: 1,
               ease: 'backInOut',
             }}
-            exit={{ rotate: '0deg' }}
             style={{
               width: 150,
               height: 150,
