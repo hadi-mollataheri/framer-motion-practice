@@ -1,11 +1,10 @@
-.example-button {
-  background: rgb(86, 1, 245);
-  color:white;
-  font-size: 1.8rem;
-  border-radius: 0.4rem;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  cursor: pointer;
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 100px;
+  gap: 20px;
 }
-  
-  
