@@ -24,14 +24,16 @@ function App() {
             animate={{
               scale: 1,
               rotate: '180deg',
+              y: [0, 150, -150, -150, 0]
             }}
             exit={{
               scale: 0,
               rotate: '0deg',
             }}
             transition={{
-              duration: 1,
+              duration: 2,
               ease: 'backInOut',
+              times: [0, .25, .6, .85 ,1]
             }}
             style={{
               width: 150,
