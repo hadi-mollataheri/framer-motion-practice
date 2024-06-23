@@ -32,7 +32,7 @@ function Basic() {
             animate={{
               scale: 1,
               rotate: '180deg',
-              y: [0, 50,  0],
+              y: [0, 80,  0],
             }}
             exit={{
               scale: 0,
