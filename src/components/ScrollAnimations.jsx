@@ -1,15 +1,25 @@
-import { motion, useScroll } from 'framer-motion';
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 
 function ScrollAnimations() {
   const { scrollYProgress } = useScroll();
+
+  const scaleX = useSpring(scrollYProgress);
+
+  const backgroundColor = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ['rgb(80, 1, 245)', 'rgb(1, 245, 13)']
+  );
 
   return (
     <div>
       <motion.div
         style={{
-          scaleX: scrollYProgress,
+          // scaleX: scrollYProgress,
+          scaleX,
           transformOrigin: 'left',
-          backgroundColor: 'blue',
+          // backgroundColor: 'blue',
+          backgroundColor,
           position: 'sticky',
           top: 0,
           width: '100%',
